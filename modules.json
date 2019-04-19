@@ -13,5 +13,7 @@
   "33acrossBidAdapter",
   "gumgumBidAdapter",
   "emx_digitalBidAdapter",
-  "medianetBidAdapter"
+  "medianetBidAdapter",
+  "smartadserverBidAdapter",
+  "rtbhouseBidAdapter"
 ]
