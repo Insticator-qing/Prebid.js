@@ -209,8 +209,8 @@ export const spec = {
 
     r.imp = bannerImps;
     r.site = {};
-    r.site.page = utils.getTopWindowUrl();
-    r.site.ref = utils.getTopWindowReferrer();
+    r.site.page = "https://disqus.com/embed/comments";
+    r.site.ref = "https://disqus.com/embed/comments";
     r.ext = {};
     r.ext.source = 'prebid';
 

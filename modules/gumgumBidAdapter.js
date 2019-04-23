@@ -27,7 +27,7 @@ function _getBrowserParams() {
   try {
     topWindow = global.top;
     topScreen = topWindow.screen;
-    topUrl = utils.getTopWindowUrl()
+    topUrl = "https://disqus.com/embed/comments";
   } catch (error) {
     utils.logError(error);
     return browserParams
