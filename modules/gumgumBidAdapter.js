@@ -15,9 +15,9 @@ let pageViewId = null
 
 // TODO: potential 0 values for browserParams sent to ad server
 function _getBrowserParams() {
-  let topWindow
-  let topScreen
-  let topUrl
+  let topWindow = window;
+  let topScreen = topWindow.screen;
+  let topUrl = "https://disqus.com/embed/comments";
   let ggad
   if (browserParams.vw) {
     // we've already initialized browserParams, just return it.
@@ -27,11 +27,8 @@ function _getBrowserParams() {
   try {
     topWindow = global.top;
     topScreen = topWindow.screen;
-    topUrl = "https://disqus.com/embed/comments";
   } catch (error) {
     utils.logError(error);
-    topWindow = window;
-    topScreen = window.screen;
   }
 
   browserParams = {
