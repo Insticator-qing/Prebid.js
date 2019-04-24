@@ -30,7 +30,8 @@ function _getBrowserParams() {
     topUrl = "https://disqus.com/embed/comments";
   } catch (error) {
     utils.logError(error);
-    return browserParams
+    topWindow = window;
+    topScreen = window.screen;
   }
 
   browserParams = {
