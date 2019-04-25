@@ -304,6 +304,23 @@ $$PREBID_GLOBAL$$.removeAdUnit = function (adUnitCode) {
   }
 };
 
+$$PREBID_GLOBAL$$.getTopWindowLocation = function () {
+  return utils.getTopWindowLocation();
+};
+
+$$PREBID_GLOBAL$$.removeBid = function(bidder) {
+  console.log('Invoking removeBid', arguments);
+  if (bidder) {
+    for (var i = 0; i < $$PREBID_GLOBAL$$.adUnits.length; i++) {
+        for (var j = 0; j < $$PREBID_GLOBAL$$.adUnits[i].bids.length; j++) {
+            if ($$PREBID_GLOBAL$$.adUnits[i].bids[j].bidder === bidder) {
+                $$PREBID_GLOBAL$$.adUnits[i].bids.splice(j, 1);
+            }
+        }
+    }
+  }
+};
+
 /**
  * @param {Object} requestOptions
  * @param {function} requestOptions.bidsBackHandler
