@@ -7,6 +7,15 @@ import { REPO_AND_VERSION } from 'src/constants';
 const BIDDER_CODE = 'sortable';
 const SERVER_URL = 'c.deployads.com';
 
+function getOriginPageUrl() {
+  var refurl = (window.parent !== window) ? document.referrer : window.location.href;
+  if (window.location.ancestorOrigins && window.location.ancestorOrigins.length > 0) {
+    var length = window.location.ancestorOrigins.length;
+    refurl = window.location.ancestorOrigins[length - 1];
+  }
+  return refurl.toString();
+};
+
 export const spec = {
   code: BIDDER_CODE,
   supportedMediaTypes: [BANNER],
@@ -134,7 +143,7 @@ export const spec = {
   getUserSyncs: (syncOptions, responses, gdprConsent) => {
     const sortableConfig = config.getConfig('sortable');
     if (syncOptions.iframeEnabled && sortableConfig && !!sortableConfig.siteId) {
-      let syncUrl = `//${SERVER_URL}/sync?f=html&s=${sortableConfig.siteId}&u=${encodeURIComponent(utils.getTopWindowLocation())}`;
+      let syncUrl = `//${SERVER_URL}/sync?f=html&s=${sortableConfig.siteId}&u=${encodeURIComponent(getOriginPageUrl())}`;
 
       if (gdprConsent) {
         syncurl += '&g=' + (gdprConsent.gdprApplies ? 1 : 0);

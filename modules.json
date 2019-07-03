@@ -15,5 +15,9 @@
   "emx_digitalBidAdapter",
   "medianetBidAdapter",
   "smartadserverBidAdapter",
-  "rtbhouseBidAdapter"
+  "rtbhouseBidAdapter",
+  "ucfunnelBidAdapter",
+  "sortableBidAdapter",
+  "brightcomBidAdapter",
+  "synacormediaBidAdapter"
 ]
