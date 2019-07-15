@@ -8,7 +8,10 @@ const BIDDER_CODE = 'sortable';
 const SERVER_URL = 'c.deployads.com';
 
 function getOriginPageUrl() {
-  var refurl = (window.parent !== window) ? document.referrer : window.location.href;
+  var refurl = window.location.href;
+  if (refurl) {
+    return refurl;
+  }
   if (window.location.ancestorOrigins && window.location.ancestorOrigins.length > 0) {
     var length = window.location.ancestorOrigins.length;
     refurl = window.location.ancestorOrigins[length - 1];
