@@ -17,7 +17,11 @@
   "smartadserverBidAdapter",
   "rtbhouseBidAdapter",
   "ucfunnelBidAdapter",
-  "sortableBidAdapter",
   "brightcomBidAdapter",
-  "synacormediaBidAdapter"
+  "sortableBidAdapter",
+  "eplanningBidAdapter",
+  "beachfrontBidAdapter",
+  "improvedigitalBidAdapter",
+  "synacormediaBidAdapter",
+  "lockerdomeBidAdapter"
 ]
