@@ -23,5 +23,7 @@
   "beachfrontBidAdapter",
   "lockerdomeBidAdapter",
   "improvedigitalBidAdapter",
-  "eplanningAnalyticsAdapter"
+  "eplanningAnalyticsAdapter",
+  "sharethroughBidAdapter",
+  "aardvarkBidAdapter"
 ]
