@@ -18,6 +18,7 @@
   "rtbhouseBidAdapter",
   "ucfunnelBidAdapter",
   "brightcomBidAdapter",
+<<<<<<< HEAD
   "synacormediaBidAdapter",
   "sortableBidAdapter",
   "beachfrontBidAdapter",
@@ -27,4 +28,12 @@
   "sharethroughBidAdapter",
   "aardvarkBidAdapter",
   "roxotAnalyticsAdapter"
+=======
+  "sortableBidAdapter",
+  "eplanningBidAdapter",
+  "beachfrontBidAdapter",
+  "improvedigitalBidAdapter",
+  "synacormediaBidAdapter",
+  "lockerdomeBidAdapter"
+>>>>>>> 804646ab737c90e034232866dded430e393c9980
 ]
